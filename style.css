@@ -1,0 +1,392 @@
+:root {
+  --bg: #fefefe;
+  --accent: #bababb;
+  --text: #2e2f2f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   GLOBAL SITE STYLES
+   ========================= */
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Playfair Script', cursive;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+}
+
+/* Hero */
+.hero {
+  margin-top: 64px;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Countdown */
+.countdown {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid var(--accent);
+}
+
+.days {
+  font-size: 4rem;
+}
+
+.label {
+  font-size: 1.2rem;
+}
+
+/* Welcome */
+.welcome {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--accent);
+}
+
+.welcome p {
+  margin-bottom: 1.5rem;
+}
+
+.signature {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Sections */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  border-bottom: 1px solid var(--accent);
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Story */
+.story-block {
+  margin-bottom: 4rem;
+}
+
+.story-block p {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Party */
+#party {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.party-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.party-left,
+.party-right {
+  flex: 1 1 45%;
+  min-width: 250px;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.bio {
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Schedule */
+#schedule {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.schedule-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.schedule-image,
+.schedule-text {
+  flex: 1 1 45%;
+  min-width: 250px;
+}
+
+.schedule-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.schedule-text h3,
+.schedule-text p {
+  text-align: center;
+}
+
+/* Registry */
+#registry p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* RSVP */
+#rsvp {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+#rsvp p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.15rem;
+}
+
+.rsvp-qr img {
+  width: 200px;
+  max-width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body { font-size: 1rem; }
+
+  .nav {
+    position: fixed;
+    top: 64px;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: var(--bg);
+    border-left: 1px solid var(--accent);
+    transition: right 0.3s ease;
+  }
+
+  .nav.open { right: 0; }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .hamburger { display: block; }
+
+  .party-row,
+  .schedule-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* =========================
+   INVITE PAGE ONLY
+   ========================= */
+
+.invite-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f7f7f7;
+  perspective: 1600px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Card */
+.card {
+  position: relative;
+  width: 90vw;
+  max-width: 600px;
+  aspect-ratio: 3 / 4;
+  transform-style: preserve-3d;
+  transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.side {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.side img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* Website button */
+.website-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.website-btn.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   LOADER + HEART
+   ========================= */
+
+#invite-loader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+#invite-loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Elegant heart settle on exit */
+#invite-loader.hide .heart {
+  animation: none;
+  transform: scale(0.85) rotate(-45deg);
+}
+
+/* Heart */
+.heart {
+  width: 80px;
+  height: 80px;
+  background: #2e2f2f;
+  position: relative;
+  transform: rotate(-45deg);
+  animation: heartbeat 1.2s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: #2e2f2f;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -40px;
+  left: 0;
+}
+
+.heart::after {
+  left: 40px;
+  top: 0;
+}
+
+@keyframes heartbeat {
+  0%   { transform: scale(1) rotate(-45deg); }
+  25%  { transform: scale(1.1) rotate(-45deg); }
+  50%  { transform: scale(1) rotate(-45deg); }
+  75%  { transform: scale(1.15) rotate(-45deg); }
+  100% { transform: scale(1) rotate(-45deg); }
+}
