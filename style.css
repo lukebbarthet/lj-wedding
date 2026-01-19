@@ -63,6 +63,7 @@ body {
   font-size: 1.6rem;
   background: none;
   border: none;
+  color: var(--text);
 }
 
 /* Hero */
@@ -269,7 +270,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #f7f7f7;
+  background: #fefefe;
   perspective: 1600px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -334,7 +335,7 @@ body {
 #invite-loader {
   position: fixed;
   inset: 0;
-  background: #fff;
+  background: #fefefe;
   display: flex;
   align-items: center;
   justify-content: center;
