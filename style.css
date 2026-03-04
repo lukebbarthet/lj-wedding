@@ -410,7 +410,7 @@ body {
   display: inline-flex;       /* icon + text */
   align-items: center;
   gap: 0.5rem;                /* space between icon and text */
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #777;                /* subtle gray */
   text-decoration: none;
   white-space: nowrap;        /* keep icon + text together */
