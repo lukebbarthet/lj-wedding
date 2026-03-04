@@ -394,11 +394,15 @@ body {
 
 /* Container for the links */
 .registry-links {
-  display: flex;              /* horizontal layout */
-  justify-content: center;    /* center links in container */
-  gap: 2rem;                  /* space between links */
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  gap: 2rem;                /* space between links */
   margin-top: 1rem;
-  flex-wrap: wrap;            /* wrap on small screens */
+  flex-wrap: wrap;          /* wrap on small screens */
+
+  /* ensure container uses full width */
+  width: 100%;
+  box-sizing: border-box;   /* include padding if any */
 }
 
 /* Each link styling */
