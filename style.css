@@ -278,8 +278,8 @@ body {
 /* Card */
 .card {
   position: relative;
-  width: 90vw;
-  max-width: 600px;
+  width: 99vw;
+  max-width: 700px;
   aspect-ratio: 3 / 4;
   transform-style: preserve-3d;
   transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1);
