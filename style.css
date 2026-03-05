@@ -275,6 +275,18 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+@media (max-width: 768px) {
+  .invite-page {
+    align-items: flex-start;
+    padding-top: 10px; /* optional: small top spacing */
+    min-height: 100vh;
+  }
+
+  .card {
+    margin-top: 0; /* ensure card isn't pushing down */
+  }
+}
+
 /* Card */
 .card {
   position: relative;
