@@ -3,7 +3,7 @@
 window.addEventListener("load", () => {
   setTimeout(() => {
     document.getElementById("invite-loader").classList.add("hide");
-  }, 1000); // 1 seconds forced animation
+  }, 600); // 1 seconds forced animation
 });
 
 const card = document.getElementById("card");
