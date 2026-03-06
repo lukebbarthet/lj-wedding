@@ -18,11 +18,11 @@ function flipCard() {
 
 card.addEventListener("click", flipCard);
 
-// Auto flip after 3 seconds if untouched
+// Auto flip after 5 seconds if untouched
 setTimeout(() => {
   if (!userInteracted) {
     card.classList.add("is-flipped");
     websiteBtn.classList.add("show");
   }
-}, 3000);
+}, 5000);
 
