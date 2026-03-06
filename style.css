@@ -279,8 +279,8 @@ body {
 .card {
   position: relative;
 
-  width: 100vw;
-  max-width: 750px;
+  width: min(100vw, 700px);
+  height: min(90vh, calc(100vw * 4 / 3));
 
   aspect-ratio: 3 / 4;
 
