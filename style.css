@@ -278,7 +278,7 @@ body {
 @media (max-width: 768px) {
   .invite-page {
     align-items: flex-start;
-    padding-top: 10px; /* optional: small top spacing */
+    padding-top: 50px; /* optional: small top spacing */
     min-height: 100vh;
   }
 
